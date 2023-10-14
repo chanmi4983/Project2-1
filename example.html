@@ -1,0 +1,85 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                body{
+                    height: 100%;
+                }
+                body {
+                    display: -ms-flexbox;
+                    display: flex;
+                    justify-content: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    padding-top: 200px;
+                    padding-bottom: 40px;
+                    background-color: #f5f5f5;
+                }
+
+                .input {
+                    position: relative;
+                    box-sizing: border-box;
+                    width: 300px;
+                    font-size: 16px;
+                    text-align: center; 
+                }
+
+                .sign {
+                    width: 100%;
+                    max-width: 330px;
+                    padding: 15px;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center; 
+                }
+                .inputContent{
+                    position: relative;
+                    box-sizing: border-box;
+                    height: auto;
+                    width: 300px;
+                    padding: 10px;
+                    font-size: 16px;
+                    
+                }
+                .submit{
+                background-color:rgb(47, 106, 255); 
+                width: 300px; 
+                height: 40px; 
+                border-color:(31, 95, 255);
+                border-style: hidden; 
+                border-radius: 5px; 
+                color: white;
+                font-size: 18px;
+                }
+            </style>
+            <title>Form</title>
+        </head>
+        <body>
+            <form class="sign">
+                <div class="Bicon">
+                    <img src="https://getbootstrap.com/docs/4.6/assets/img/favicons/apple-touch-icon.png" alt="bootstrap" width="72" height="72">
+                    <br>
+                </div>
+                <div class="input">
+                    <h1 style="font-weight: normal; font-family:Arial, Helvetica, sans-serif; font-size:30px">Please sign in</h1>
+                    <label for="email"></label>
+                    <input type="text" id="email" class="inputContent" name="email" style= "border: solid #ccc;border-bottom: none; border-top-left-radius: 5px; border-top-right-radius: 5px"placeholder='Email address' required autofocus>
+                    <br>
+                    <label for="pwd"></label>
+                    <input type="password" id="pwd" class="inputContent" name="pwd"style ="border: solid #ccc;border-bottom-left-radius: 5px; border-bottom-right-radius: 5px" placeholder='Password' required>
+                    <br>
+                    <br>
+                    <input type="checkbox" id="save" name="save" style="font-weight: 400;">Remember me
+                    <br>
+                    <br>
+                    <input type="submit" class = "submit" value="Sign in">
+                
+                    <p style = "color:gray"><br><br>&copy; 2017-2022</p>
+                    
+                </div>
+            </form>
+        </body>
+        </html>
