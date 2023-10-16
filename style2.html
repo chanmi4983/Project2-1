@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    body{
+        font-family: Arial;
+        background-color: #d14836;
+        line-height: 20px;
+    }
+    
+    .all{
+        min-width : 900px;
+        position: relative;
+        overflow: auto;
+    }
+
+    #top{
+        color: #ffffff;
+        padding: 15px;
+        font-size: 30px;
+        line-height: 26px;
+    }
+
+    #top h1{
+        margin:0;
+        line-height: 50px;
+    }
+
+    #menubar{
+        width: 190px;
+        float: right;
+    }
+
+    #content{
+        padding: 10px;
+        background-color: #ffffff;
+        font: 80% verdana;
+    }
+    
+    #content h1, #content h2{
+        color: #d14836;
+    }
+    #sideBar{
+        background-color: #F6DAD7;
+        color: #d14836;
+        padding: 10px;
+    }
+    #end{
+        text-align: center;
+        padding: 10px;
+        font-size: 70%;
+        color: #ffffff;
+    }
+
+    #menulist {
+        padding:0;
+        font: 16px verdana;
+    }
+
+    .menuitem {
+        width: 155px;
+        background-color: #d14836;
+        border: 1px solid #d14836;
+        border-radius: 40px;
+        color: #ffffff;
+        list-style-type: none;
+        margin: 10px;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menuitem:nth-child(2) {
+        background-color:white;
+        color: #d14836;
+        font-weight:bold;
+    }
+
+    .menuitem:hover {
+        background-color: #ffffff;
+        color: #d14836;
+    }
+
+    a {
+        color: #d14836;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+<div class = "all">
+
+    <div id = "top">
+        <h1>Welcome to nachanmi Homepage (22200240)</h1><br>
+        <p1>Use the menu to select different Stylesheets</p1><br>
+        <br>
+    </div>
+
+    <div id = "middle">
+        <div id = "menubar">
+        <ul id = "menulist">
+        <li class = "menuitem" onclick = "redirectToPage('style1.html')" >Stylesheet 1</li>
+        <li class = "menuitem" onclick ="redirectToPage('style2.html')" >Stylesheet 2</li>
+        <li class = "menuitem" onclick = "redirectToPage('style3.html')">Stylesheet 3</li>
+        <li class = "menuitem" onclick = "redirectToPage('style4.html')" >Stylesheet 4</li>
+        <li class = "menuitem" onclick = "redirectToPage('nostyle.html')" >No Stylesheet</li>
+        </ul>
+    </div>
+
+    <script>
+        function redirectToPage(pageURL){
+            location.href = pageURL;
+        }
+    </script>
+
+        <div id = "content">
+            <h1>Same Page Different Stylesheets</h1>
+            <p1>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p1>
+            <br>
+            <a href="style1.html">Stylesheet1,</a>
+            <a href="style2.html">Stylesheet2,</a>
+            <a href="style3.html">Stylesheet3,</a> 
+            <a href="style4.html">Stylesheet4.</a><br>
+            <h2>No Styles</h2>
+            <p1>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+                <br><a href = "nostyle.html">No Stylesheet</a>.</p1>
+            
+            </div>
+                <div id = "sideBar">
+            <h3>Side-Bar</h3>
+                    <p1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p1><br><br>
+            </div>
+       
+
+        <div id = "end">
+            
+            <p2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p2>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: 100% Lucida Sans, Verdana;
+            margin: 20px;
+            line-height: 26px; 
+        }
+        .all{
+            position: relative;
+            overflow: auto;
+        }
+        #top, #sidebar, #end, .menuitem{
+            border-radius: 4px;
+            margin: 4px;
+        }
+    
+        #top{
+            background-color: #04AA6D;
+            color: #ffffff;
+            padding: 15px;
+        }
+        #menubar{
+            width: 200px;
+            float: left
+        }
+        .menuitem{
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            list-style-type: none;
+            padding:2px;
+            cursor:pointer;
+        }
+        .menuitem:hover{
+            background-color: #ffffff;
+        }
+        .menuitem:first-child{
+            background-color: #04AA6D;
+            color: white;
+            font-weight:bold;
+        }
+        #content{
+            padding: 10px;
+            margin: 0 210px;
+        }
+        a{
+            color: #000000;
+            text-decoration: underline;
+        }
+        #sideBar{
+            background-color: #32a4e7;
+            color: #ffffff;
+            padding: 10px;
+            width: 180px;
+            bottom:65px;
+            top: 92px;
+            right: 0;
+            position: absolute;
+            border-radius: 5px;
+            max-width: 800px;
+        }
+    
+        #end{
+            border: 1px solid #d4d4d4;
+            padding: 5px;
+            font-size: 70%;
+            line-height:14px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+        
+
+    </style>
+</head>
+<body>
+<div class = "all">
+
+    <div id = "top">
+        <h1 style = "margin: 0; padding:0;">Welcome to nachanmi Homepage (22200240)</h1>
+        <p1 style = "margin: 0; padding:0;">Use the menu to select different Stylesheets</p1>
+        <br>
+    </div>
+
+    <div class = "middle">
+        <div id = "menubar">
+        <ul id = "menulist" style= "margin: 0; padding:0">
+        <li class = "menuitem" onclick = "redirectToPage('style1.html')" >Stylesheet 1</li>
+        <li class = "menuitem" onclick ="redirectToPage('style2.html')" >Stylesheet 2</li>
+        <li class = "menuitem" onclick = "redirectToPage('style3.html')">Stylesheet 3</li>
+        <li class = "menuitem" onclick = "redirectToPage('style4.html')" >Stylesheet 4</li>
+        <li class = "menuitem" onclick = "redirectToPage('nostyle.html')" >No Stylesheet</li>
+        </ul>
+    </div>
+
+    <script>
+        function redirectToPage(pageURL){
+            location.href = pageURL;
+        }
+    </script>
+
+        <div id = "content">
+            <h1>Same Page Different Stylesheets</h1>
+            <p1>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p1>
+            <br>
+            <a href="style1.html">Stylesheet1,</a>
+            <a href="style2.html">Stylesheet2,</a>
+            <a href="style3.html">Stylesheet3,</a> 
+            <a href="style4.html">Stylesheet4.</a><br>
+            <h2>No Styles</h2>
+            <p1>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+                <br><a href = "nostyle.html">No Stylesheet</a>.</p1>
+            
+            <div id = "sideBar">
+            <h3>Side-Bar</h3>
+                    <p1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p1>
+            </div>
+        </div> 
+
+        <div id = "end">
+            
+            <p2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p2>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

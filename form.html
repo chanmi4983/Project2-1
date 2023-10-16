@@ -1,70 +1,58 @@
-        <!doctype html>
-        <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <title>Form Elements</title>
-
-            <style>
-            .form-group {
-                margin-bottom: 20px;
-            }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-            <h1>Form Elements</h1>
-            
-            <form>
-                <div class="form-group">
-                <label for="text-input">Text Input</label>
-                <input type="text" id="text-input" class="form-control">
-                </div>
-
-                <div class="form-group">
-                <label>Radio Buttons</label>
-                <div>
-                    <input type="radio" id="radio1" name="radio">
-                    <label for="radio1">Option 1</label>
-                </div>
-                <div>
-                    <input type="radio" id="radio2" name="radio">
-                    <label for="radio2">Option 2</label>
-                </div>
-                </div>
-
-                <div class="form-group">
-                <label>Checkboxes</label>
-                <div>
-                    <input type="checkbox" id="checkbox1">
-                    <label for="checkbox1">Check this</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="checkbox2">
-                    <label for="checkbox2">Check that</label>
-                </div>
-                </div>
-
-                <div class="form-group">
-                <label for="select-input">Select Box</label>
-                <select id="select-input" class="form-control">
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                </select>
-                </div>
-
-                <div class="form-group">
-                <label for="date-input">Date Input</label>
-                <input type="date" id="date-input" class="form-control">
-                </div>
-
-                <div class="form-group">
-                <label for="textarea">Textarea</label>
-                <textarea id="textarea" class="form-control" rows="4"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            </div>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환자 기록 관리 시스템</title>
+</head>
+<body>
+    <h1>환자 기록 입력 폼</h1>
+    <form action="submit.php" method="post">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="dob">생년월일:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
+        <label>성별:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">남성</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">여성</label><br><br>
+        
+        <label for="patientId">진료 아이디:</label>
+        <input type="text" id="patientId" name="patientId" required><br><br>
+        
+        <label for="contact">연락처:</label>
+        <input type="tel" id="contact" name="contact" required><br><br>
+        
+        <label for="weight">몸무게 (kg):</label>
+        <input type="number" id="weight" name="weight" step="0.01" required><br><br>
+        
+        <label for="height">키 (cm):</label>
+        <input type="number" id="height" name="height" step="0.1" required><br><br>
+        
+        <label for="bloodType">혈액 형:</label>
+        <select id="bloodType" name="bloodType" required>
+            <option value="A">A형</option>
+            <option value="B">B형</option>
+            <option value="AB">AB형</option>
+            <option value="O">O형</option>
+        </select><br><br>
+        
+        <label for="symptoms">증상:</label>
+        <textarea id="symptoms" name="symptoms" rows="4" required></textarea><br><br>
+        
+        <label for="diagnosis">진단:</label>
+        <input type="text" id="diagnosis" name="diagnosis" required><br><br>
+        
+        <label>알러지:</label>
+        <input type="checkbox" id="allergy1" name="allergy[]" value="penicillin">
+        <label for="allergy1">페니실린</label>
+        <input type="checkbox" id="allergy2" name="allergy[]" value="aspirin">
+        <label for="allergy2">아스피린</label><br><br>
+        
+        <button type="submit">기록 저장</button>
+    </form>
+</body>
+</html>
